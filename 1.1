@@ -1,0 +1,33 @@
+メール失礼します。
+琉球大学工学部知能情報コース3年次　大城盛心です。
+OS課題の採点よろしくお願いします。
+
+今回私は、マルウェアの一種であるトロイの木馬について、教科書、英語wikipedia、日本語wikipediaの三つを比較しました。
+・教科書
+教科書のトロイの木馬についての記述は
+"A program that acts in a clandestine or malicious manner, rather than simply performing its stated function, is called a Trojan horse. If the pro- gram is executed in another domain, it can escalate privileges. As an example, consider a mobile app that purports to provide some benign functionality— say, a flashlight app—but that meanwhile surreptitiously accesses the user’s contacts or messages and smuggles them to some remote server.”
+というもので、大まかな説明と、少し概観を説明したような例で説明されていました。
+
+・日本語wikipedia
+日本語のwikipediaでは、
+「トロイの木馬は、様々な経路を通じて被害者の手元に届いたプログラム、実行形式ファイル(Windowsであれば .EXE 又は .COM という拡張子のファイル)を実行することから悪意ある動作を開始する場合がほとんどである。さらに、実行形式以外のファイルであるかのように偽装したり、偽装ではなく本当にオフィススイート等のファイルであるが、その中にスクリプト等として悪意あるコードが含まれることもある。」
+とあり、下に実行時にどう動くかでの、分類(例、バックドア型、パスワード窃盗型など)や、簡単な対策についての説明がなされていた。
+
+・英語のwikipedia
+英語のwikipediaも上二つ同様の説明がなされているが、上二つとの大きな違いは、
+"A Trojan horse is a program that purports to perform some legitimate function, yet upon execution it compromises the user's security.[17] A simple example is the following malicious version of the Linux sudo command. An attacker would place this script in a publicly writable directory (e.g., /tmp). If an administrator happens to be in this directory and executes sudo, then the Trojan may execute, compromising the administrator's password.
+#!/usr/bin/env bash
+
+# Turn off the character echo to the screen. sudo does this to prevent the user's password from appearing on screen when they type it in.
+stty -echo〜〜〜〜〜〜
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+ with a failed password attempt
+To prevent a sudo Trojan horse, set the . entry in the PATH environment variable to be located at the tail end.[18] For example: PATH=/usr/local/bin:/usr/bin:..
+
+というような、プログラムの例が書かれていることと、そのプログラムに対する技術的な対策が記述されていることである。
+
+考察
+この三つの違いについて
+教科書はそもそもOSについて書くことがメインの内容になっているため、トロイの木馬についての記述が少ないと思われる。
+日本語のwikipediaは、このサイト自体を使う人にプログラミングの知識がある人があまりいないが、トロイの木馬というマルウェア自体は普遍的に知られているからなのではと考えた。
+英語のwikipediaでは、逆にトロイの木馬を知っている人エンジニアのようなユーザーが多く、そもそも検索されないのではと考えた。
